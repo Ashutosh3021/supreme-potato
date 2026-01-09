@@ -11,23 +11,45 @@ const Hero = () => {
   const [showSubtitle, setShowSubtitle] = useState(false);
   const [showStatement, setShowStatement] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  
-  const { currentText: initText, isComplete: initComplete } = useTypingAnimation('> initializing ashutosh_patra.exe', 80);
-  const { currentText: nameText, isComplete: nameComplete } = useTypingAnimation('ASHUTOSH PATRA', 40);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     if (typeof window !== 'undefined') {
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     }
+  }, []);
+  
+  const { currentText: initText, isComplete: initComplete } = useTypingAnimation('> initializing ashutosh_patra.exe', 80);
+  const { currentText: nameText, isComplete: nameComplete } = useTypingAnimation('ASHUTOSH PATRA', 40);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+    
+    if (typeof window !== 'undefined' && isClient) {
+      // Set dimensions on client side
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    }
     
     if (initComplete) {
       const timer = setTimeout(() => setShowName(true), 500);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+        if (typeof window !== 'undefined' && isClient) {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
     }
-  }, [initComplete]);
+  }, [initComplete, isClient]);
 
   useEffect(() => {
     if (nameComplete) {
@@ -46,7 +68,7 @@ const Hero = () => {
     <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-4">
       {/* Floating particles with parallax effect */}
       <div className="absolute inset-0 overflow-hidden">
-        {typeof window !== 'undefined' && [...Array(15)].map((_, i) => (
+        {isClient && [...Array(15)].map((_, i) => (
           <ParallaxElement key={i} speed={0.02}>
             <motion.div
               className="absolute w-1 h-1 bg-[#00d9ff] rounded-full"

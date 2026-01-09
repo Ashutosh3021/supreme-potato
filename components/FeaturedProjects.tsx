@@ -110,13 +110,13 @@ const FeaturedProjects = () => {
                 
                 <div className="flex gap-4 pt-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/heart_health_tracker" 
                     className="px-6 py-3 bg-[#00d9ff] text-black font-semibold rounded-lg hover:bg-[#00b3d4] transition-colors"
                   >
                     View Project →
                   </a>
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/heart_health_tracker" 
                     className="px-6 py-3 border border-[#00d9ff] text-[#00d9ff] font-semibold rounded-lg hover:bg-[#00d9ff]/10 transition-colors"
                   >
                     GitHub →
@@ -196,13 +196,13 @@ const FeaturedProjects = () => {
                 
                 <div className="flex gap-4 pt-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/gym_form_checker" 
                     className="px-6 py-3 bg-[#00d9ff] text-black font-semibold rounded-lg hover:bg-[#00b3d4] transition-colors"
                   >
                     View Project →
                   </a>
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/gym_form_checker" 
                     className="px-6 py-3 border border-[#00d9ff] text-[#00d9ff] font-semibold rounded-lg hover:bg-[#00d9ff]/10 transition-colors"
                   >
                     GitHub →
@@ -362,13 +362,13 @@ const FeaturedProjects = () => {
                 
                 <div className="flex gap-4 pt-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/AI-traffic-data-analysis" 
                     className="px-6 py-3 bg-[#00d9ff] text-black font-semibold rounded-lg hover:bg-[#00b3d4] transition-colors"
                   >
                     View Project →
                   </a>
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/AI-traffic-data-analysis" 
                     className="px-6 py-3 border border-[#00d9ff] text-[#00d9ff] font-semibold rounded-lg hover:bg-[#00d9ff]/10 transition-colors"
                   >
                     GitHub →
@@ -448,13 +448,13 @@ const FeaturedProjects = () => {
                 
                 <div className="flex gap-4 pt-4">
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/Digital-footprint-mapper-main" 
                     className="px-6 py-3 bg-[#00d9ff] text-black font-semibold rounded-lg hover:bg-[#00b3d4] transition-colors"
                   >
                     View Project →
                   </a>
                   <a 
-                    href="#" 
+                    href="https://github.com/Ashutosh3021/Digital-footprint-mapper-main" 
                     className="px-6 py-3 border border-[#00d9ff] text-[#00d9ff] font-semibold rounded-lg hover:bg-[#00d9ff]/10 transition-colors"
                   >
                     GitHub →

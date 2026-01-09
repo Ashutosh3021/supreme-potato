@@ -8,9 +8,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true  // Required for static export
   },
-  // GitHub Pages base path - adjust if deploying to subdirectory
+  // GitHub Pages deployment to subdirectory
   assetPrefix: './',
-  basePath: '', // Set this if deploying to a subdirectory like github.com/username/repo-name
+  basePath: '/PORTFOLIO--WEBSITE', // GitHub Pages subdirectory path
 };
 
 export default nextConfig;

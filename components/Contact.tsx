@@ -7,8 +7,10 @@ import ParallaxElement from '@/components/cursor/ParallaxElement';
 
 const Contact = () => {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     if (typeof window !== 'undefined') {
       setDimensions({
         width: window.innerWidth,
@@ -25,7 +27,7 @@ const Contact = () => {
     <section className="min-h-screen flex flex-col justify-center items-center px-4 py-20 relative overflow-hidden">
       {/* Background particles with parallax effect */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {typeof window !== 'undefined' && [...Array(20)].map((_, i) => (
+        {isClient && [...Array(20)].map((_, i) => (
           <ParallaxElement key={i} speed={0.01}>
             <motion.div
               className="absolute w-1 h-1 bg-[#00d9ff] rounded-full"
@@ -34,15 +36,19 @@ const Contact = () => {
                 top: `${Math.random() * 100}%`,
                 willChange: 'transform, opacity',
               }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.3, 1, 0.3],
-              }}
-              transition={{
-                duration: Math.random() * 3 + 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
+              animate={
+                isClient ? {
+                  y: [0, -20, 0],
+                  opacity: [0.3, 1, 0.3],
+                } : {}
+              }
+              transition={
+                isClient ? {
+                  duration: Math.random() * 3 + 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                } : {}
+              }
             />
           </ParallaxElement>
         ))}
