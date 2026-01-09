@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
   // GitHub Pages deployment to subdirectory
   assetPrefix: './',
-  basePath: '/PORTFOLIO--WEBSITE', // GitHub Pages subdirectory path
+  basePath: '/supreme-potato', // GitHub Pages subdirectory path
 };
 
 export default nextConfig;
